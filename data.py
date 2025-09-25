@@ -1,0 +1,53 @@
+import pandas as pd
+
+def get_data():
+    return pd.read_csv('Seattle_Hotels.csv', encoding="latin-1")
+
+#import os
+#current_dir = os.getcwd()
+#os.chdir(r'C:\Users\seaox\Desktop\Seattle_Hotels')
+#print(f"Current working directory: {current_dir}")
+
+if __name__ == "__main__":
+    df=get_data()
+    print(df)
+    pd.set_option('display.max_columns', None)
+    print(df.head())
+    print(df["desc"][0])
+
+'''
+                                        name  ...                                               desc
+0             Hilton Garden Seattle Downtown  ...  Located on the southern tip of Lake Union, the...
+1                     Sheraton Grand Seattle  ...  Located in the city's vibrant core, the Sherat...
+2              Crowne Plaza Seattle Downtown  ...  Located in the heart of downtown Seattle, the ...
+3              Kimpton Hotel Monaco Seattle   ...  What?s near our hotel downtown Seattle locatio...
+4                         The Westin Seattle  ...  Situated amid incredible shopping and iconic a...
+..                                       ...  ...                                                ...
+147                The Halcyon Suite Du Jour  ...  Located in Queen Anne district, The Halcyon Su...
+148                              Vermont Inn  ...  Just a block from the world famous Space Needl...
+149               Stay Alfred on Wall Street  ...  Stay Alfred on Wall Street resides in the hear...
+150       Pike's Place Lux Suites by Barsala  ...  The perfect marriage of heightened convenience...
+151  citizenM Seattle South Lake Union hotel  ...  Yes, it's true. Every room at citizenM is the ...
+
+[152 rows x 3 columns]
+
+                                        name                                          address                                               desc
+0             Hilton Garden Seattle Downtown  1821 Boren Avenue, Seattle Washington 98101 USA   Located on the southern tip of Lake Union, the...
+1                     Sheraton Grand Seattle   1400 6th Avenue, Seattle, Washington 98101 USA   Located in the city's vibrant core, the Sherat...
+2              Crowne Plaza Seattle Downtown                  1113 6th Ave, Seattle, WA 98101   Located in the heart of downtown Seattle, the ...
+3              Kimpton Hotel Monaco Seattle                    1101 4th Ave, Seattle, WA98101   What?s near our hotel downtown Seattle locatio...
+4                         The Westin Seattle  1900 5th Avenue, Seattle, Washington 98101 USA  Situated amid incredible shopping and iconic a...
+'''
+
+"""
+Located on the southern tip of Lake Union, the Hilton Garden Inn Seattle Downtown hotel is perfectly located for business and leisure. 
+The neighborhood is home to numerous major international companies including Amazon, Google and the Bill & Melinda Gates Foundation. 
+A wealth of eclectic restaurants and bars make this area of Seattle one of the most sought out by locals and visitors. 
+Our proximity to Lake Union allows visitors to take in some of the Pacific Northwest's majestic scenery and enjoy outdoor activities like kayaking and sailing. 
+over 2,000 sq. ft. of versatile space and a complimentary business center. 
+State-of-the-art A/V technology and our helpful staff will guarantee your conference, cocktail reception or wedding is a success. 
+Refresh in the sparkling saltwater pool, or energize with the latest equipment in the 24-hour fitness center. 
+Tastefully decorated and flooded with natural light, our guest rooms and suites offer everything you need to relax and stay productive. 
+Unwind in the bar, and enjoy American cuisine for breakfast, lunch and dinner in our restaurant. The 24-hour Pavilion Pantry? 
+stocks a variety of snacks, drinks and sundries.
+"""
